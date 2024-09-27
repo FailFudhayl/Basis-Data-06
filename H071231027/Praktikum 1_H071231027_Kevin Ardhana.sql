@@ -42,7 +42,7 @@ CREATE TABLE members(
 	email VARCHAR(100) UNIQUE NOT NULL,
 	phone_number CHAR(10),
 	join_date DATE NOT NULL,
-	membership_type VARCHAR(50) NOT NULL,
+	membership_type VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE borrowings(
@@ -59,7 +59,7 @@ DESCRIBE members;
 DESCRIBE borrowings;
 
 ALTER TABLE books
-ADD published_year YEAR NOT NULL;`
+ADD published_year YEAR NOT NULL;
 
 ALTER TABLE books
 ADD genre VARCHAR(50) NOT NULL;
