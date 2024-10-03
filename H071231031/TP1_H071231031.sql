@@ -1,0 +1,50 @@
+CREATE DATABASE library;
+
+USE library;
+
+CREATE TABLE authors (
+Id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+NAME VARCHAR(100) NOT NULL,
+nationality VARCHAR(50);
+
+DESCRIBE authors;
+
+CREATE TABLE books (
+Id INTEGER PRIMARY KEY AUTO_INCREMENT,
+isbn CHAR UNIQUE NOT NULL(13),
+title VARCHAR(100) NOT NULL,
+author_id INT NOT NULL,
+published_year YEAR NOT NULL,
+genre VARCHAR(50) NOT NULL,
+copies_avaible INTEGER NOT NULL,
+FOREIGN KEY (author_id) REFERENCES authors(Id));
+
+DESCRIBE books;
+
+ALTER TABLE authors ADD nationality VARCHAR(100);
+
+DESCRIBE authors;
+
+ALTER TABLE books MODIFY isbn CHAR UNIQUE;
+
+CREATE TABLE members (
+Id INTEGER PRIMARY KEY AUTO_INCREMENT,
+first_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+email VARCHAR(100) UNIQUE NOT NULL,
+phone_number CHAR(10),
+Join_date DATE NOT NULL,
+membership_type VARCHAR(50) NOT NULL);
+
+DESCRIBE members;
+
+CREATE TABLE borrowings (
+Id INTEGER PRIMARY KEY AUTO_INCREMENT,
+member_id INTEGER NOT NULL,
+book_id INTEGER NOT NULL,
+borrow_date DATE NOT NULL,
+return_date DATE,
+FOREIGN KEY (member_id) REFERENCES members(Id),
+FOREIGN KEY (book_id) REFERENCES books(Id));
+
+DESCRIBE borrowings;
