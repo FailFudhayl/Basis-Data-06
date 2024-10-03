@@ -56,9 +56,6 @@ ADD FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE;
 ALTER TABLE borrowings
 ADD CONSTRAINT borrowings_ibfk_2 FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-SHOW CREATE TABLE borrowings;
-
-
 DELETE FROM members 
 WHERE membership_type = 'Standar';
 
