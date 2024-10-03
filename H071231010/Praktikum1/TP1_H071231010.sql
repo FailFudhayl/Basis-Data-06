@@ -22,7 +22,7 @@ ALTER TABLE books
 ADD CONSTRAINT UNIQUE (isbn);  
 
 DESCRIBE authors;
-DESCRIBE books
+DESCRIBE books;
 SHOW TABLES;
 
 #5
@@ -73,4 +73,6 @@ CREATE TABLE borrowings (
 	FOREIGN KEY (member_id) REFERENCES members(id),
 	FOREIGN KEY (book_id) REFERENCES books(id)
 )
- DESCRIBE borrowings;
+DESCRIBE borrowings;
+
+ 
