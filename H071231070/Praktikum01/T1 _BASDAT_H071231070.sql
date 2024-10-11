@@ -7,7 +7,7 @@
 	CREATE TABLE authors(
 		id INT PRIMARY KEY AUTO_INCREMENT ,
 		NAME VARCHAR (100) NOT NULL
-	)
+	);
 	
 	CREATE TABLE books(
 		id INT PRIMARY KEY AUTO_INCREMENT,
@@ -15,7 +15,7 @@
 		title VARCHAR (100) NOT NULL,
 		author_id INT,
 		FOREIGN KEY (author_id) REFERENCES authors(id)
-	)
+	);
 	
 -- 	nomor 5
 	CREATE TABLE members (
@@ -26,7 +26,7 @@
 		phone_number CHAR (10),
 		join_date DATE NOT NULL,
 		membership_type VARCHAR (50) NOT NULL
-	)
+	);
 	
 	CREATE TABLE borrowings (
 		id INT PRIMARY KEY AUTO_INCREMENT,
@@ -36,7 +36,7 @@
 		return_date DATE,
 		FOREIGN KEY (member_id) REFERENCES members(id),
     	FOREIGN KEY (book_id) REFERENCES books(id)
-	)
+	);
 	
 	ALTER TABLE books
     ADD COLUMN published_year YEAR NOT NULL,

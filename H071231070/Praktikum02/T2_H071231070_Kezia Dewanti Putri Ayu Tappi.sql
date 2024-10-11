@@ -1,11 +1,4 @@
-SELECT * FROM products
-ORDER BY msrp ASC;
-SELECT * FROM customers;
-SELECT * FROM employees;
-SELECT * FROM products;
-
- 
--- Nomor 1
+ -- Nomor 1
 SELECT productCode AS 'Kode produk', productName AS 'Nama Produk', quantityinstock AS 'Jumlah Stok'
 FROM products
 WHERE quantityinstock >= 5000 AND quantityinstock <= 6000;
@@ -34,6 +27,7 @@ SELECT DISTINCT  country, city
 FROM customers
 ORDER  BY country, city;
 
+-- Tugas Tambahan
 SELECT orderdate, ordernumber
 FROM orders 
 ORDER BY orderdate DESC 
