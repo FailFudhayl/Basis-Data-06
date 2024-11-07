@@ -44,4 +44,9 @@ WHERE quantityordered > 50
 		AND priceeach > 100
 		AND productcode NOT LIKE 's18%'
 ORDER BY discountedtotalprice DESC;
+
+SELECT *  FROM authors;
+SELECT *  FROM books;
+SELECT *  FROM borrowings;
+SELECT *  FROM members;
 		
